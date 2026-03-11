@@ -36,7 +36,7 @@
             this.TextLableLimitDeposit = new System.Windows.Forms.Label();
             this.textBoxLimitDeposit = new System.Windows.Forms.TextBox();
             this.buttonMonthIncrease = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonMonthsExceed = new System.Windows.Forms.Button();
             this.labelTaskDescription = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -98,15 +98,15 @@
             this.buttonMonthIncrease.UseVisualStyleBackColor = true;
             this.buttonMonthIncrease.Click += new System.EventHandler(this.buttonMonthIncrease_Click);
             // 
-            // button2
+            // buttonMonthsExceed
             // 
-            this.button2.Location = new System.Drawing.Point(15, 313);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(600, 28);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Отобразить месяц когда размер влкад превысит лимит \r\n";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonMonthsExceed.Location = new System.Drawing.Point(15, 313);
+            this.buttonMonthsExceed.Name = "buttonMonthsExceed";
+            this.buttonMonthsExceed.Size = new System.Drawing.Size(600, 28);
+            this.buttonMonthsExceed.TabIndex = 7;
+            this.buttonMonthsExceed.Text = "Отобразить месяц когда размер влкад превысит лимит \r\n";
+            this.buttonMonthsExceed.UseVisualStyleBackColor = true;
+            this.buttonMonthsExceed.Click += new System.EventHandler(this.button2_Click);
             // 
             // labelTaskDescription
             // 
@@ -123,7 +123,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelTaskDescription);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonMonthsExceed);
             this.Controls.Add(this.buttonMonthIncrease);
             this.Controls.Add(this.textBoxLimitDeposit);
             this.Controls.Add(this.TextLableLimitDeposit);
@@ -147,7 +147,7 @@
         private System.Windows.Forms.Label TextLableLimitDeposit;
         private System.Windows.Forms.TextBox textBoxLimitDeposit;
         private System.Windows.Forms.Button buttonMonthIncrease;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonMonthsExceed;
         private System.Windows.Forms.Label labelTaskDescription;
     }
 }

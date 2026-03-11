@@ -21,44 +21,41 @@ namespace CcharpWinFormsTask2
         {
             double initialDeposit;
             double limitIncomeDeposit;
-            double limitDeposit;
 
             double monthIncrease;
-            double monthsExceed;
 
             try
             {
                 initialDeposit = double.Parse(this.textBoxInitialDeposit.Text);
                 limitIncomeDeposit = double.Parse(this.textBoxLimitIncomeDeposit.Text);
-                limitDeposit = double.Parse(this.textBoxLimitDeposit.Text);
+
             }
             catch (FormatException)
             {
                 return;
             }
-            MessageBox.Show("(╯°□°）╯︵ ┻━┻");
+            monthIncrease = Logic.CompareMonthWhenIncreaseExceeds(initialDeposit, limitIncomeDeposit);
+            MessageBox.Show($"Ежемесячный процент дохода превысит {limitIncomeDeposit}  через {monthIncrease} мес.");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             double initialDeposit;
-            double limitIncomeDeposit;
             double limitDeposit;
 
-            double monthIncrease;
             double monthsExceed;
 
             try
             {
                 initialDeposit = double.Parse(this.textBoxInitialDeposit.Text);
-                limitIncomeDeposit = double.Parse(this.textBoxLimitIncomeDeposit.Text);
                 limitDeposit = double.Parse(this.textBoxLimitDeposit.Text);
             }
             catch (FormatException)
             {
                 return;
             }
-            MessageBox.Show("(╯°□°）╯︵ ┻━┻");
+            monthsExceed = Logic.CompareMonthsExceedSum(initialDeposit, limitDeposit);
+            MessageBox.Show($"Размер вклада превысит {limitDeposit}  через {monthsExceed} мес.");
         }
     }
 
