@@ -96,6 +96,7 @@
             this.buttonMonthIncrease.TabIndex = 6;
             this.buttonMonthIncrease.Text = "Отобразить через сколько ежемесячный процент дохода превысит заданный процент";
             this.buttonMonthIncrease.UseVisualStyleBackColor = true;
+            this.buttonMonthIncrease.Click += new System.EventHandler(this.buttonMonthIncrease_Click);
             // 
             // button2
             // 
@@ -105,6 +106,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Отобразить месяц когда размер влкад превысит лимит \r\n";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // labelTaskDescription
             // 
@@ -130,7 +132,7 @@
             this.Controls.Add(this.TextLableInitialDeposit);
             this.Controls.Add(this.textBoxInitialDeposit);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Вклад";
             this.ResumeLayout(false);
             this.PerformLayout();
 
