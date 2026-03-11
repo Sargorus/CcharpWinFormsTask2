@@ -15,6 +15,10 @@ namespace CcharpWinFormsTask2
         public Form1()
         {
             InitializeComponent();
+
+            textBoxInitialDeposit.Text = Properties.Settings.Default.initialDeposit.ToString();
+            textBoxLimitDeposit.Text = Properties.Settings.Default.limitDeposit.ToString();
+            textBoxLimitIncomeDeposit.Text = Properties.Settings.Default.limitIncomeDeposit.ToString();
         }
 
         private void buttonMonthIncrease_Click(object sender, EventArgs e)
@@ -34,6 +38,10 @@ namespace CcharpWinFormsTask2
             {
                 return;
             }
+
+            Properties.Settings.Default.initialDeposit = initialDeposit;
+            Properties.Settings.Default.limitIncomeDeposit = limitIncomeDeposit;
+            Properties.Settings.Default.Save();
             monthIncrease = Logic.CompareMonthWhenIncreaseExceeds(initialDeposit, limitIncomeDeposit);
             MessageBox.Show($"Ежемесячный процент дохода превысит {limitIncomeDeposit}  через {monthIncrease} мес.");
         }
@@ -54,6 +62,9 @@ namespace CcharpWinFormsTask2
             {
                 return;
             }
+            Properties.Settings.Default.initialDeposit = initialDeposit;
+            Properties.Settings.Default.limitDeposit = limitDeposit;
+            Properties.Settings.Default.Save();
             monthsExceed = Logic.CompareMonthsExceedSum(initialDeposit, limitDeposit);
             MessageBox.Show($"Размер вклада превысит {limitDeposit}  через {monthsExceed} мес.");
         }
